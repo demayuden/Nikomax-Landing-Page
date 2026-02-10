@@ -1,0 +1,120 @@
+/* ---------- GLOBAL SECTION STYLES ---------- */
+
+.section {
+  padding: 80px 20px;
+}
+
+.section-center {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #020617;
+}
+
+.section-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #374151;
+  margin-bottom: 20px;
+}
+
+/* ---------- HERO ---------- */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.hero-content {
+  max-width: 850px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: #38bdf8;
+  margin-bottom: 20px;
+}
+
+.hero-description {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #e5e7eb;
+  margin-bottom: 30px;
+}
+
+/* ---------- BUTTON ---------- */
+
+.btn-primary {
+  background-color: #38bdf8;
+  color: #020617;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(56, 189, 248, 0.3);
+}
+
+/* ---------- BENEFITS ---------- */
+
+.benefits {
+  background-color: #f9fafb;
+}
+
+.benefits-list {
+  max-width: 900px;
+  margin: 40px auto 0;
+  text-align: left;
+}
+
+.benefits-list li {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+/* ---------- FINAL CTA ---------- */
+
+.final-cta {
+  background-color: #020617;
+  color: white;
+  text-align: center;
+}
+
+.final-cta h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.final-cta p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  line-height: 1.7;
+  color: #e5e7eb;
+}
+
+/* --------*
