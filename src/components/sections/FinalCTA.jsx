@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router-dom";
+
 const FinalCTA = () => {
+  const navigate = useNavigate();
   return (
     <section className="section final-cta">
       <h2>Ready to Level Up Your Business?</h2>
@@ -9,8 +12,11 @@ const FinalCTA = () => {
         is known for worldwide.
       </p>
 
-      <button className="btn-primary">
-        Register for the Certification Course
+       <button
+          className="btn-primary"
+          onClick={() => navigate("/register")}
+        >
+          Register for Certification
       </button>
     </section>
   );

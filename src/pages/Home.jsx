@@ -6,13 +6,27 @@ import FinalCTA from "../components/sections/FinalCTA";
 
 const Home = () => {
   return (
-    <>
-      <Hero />
-      <Context />
-      <ImageText />
-      <Benefits />
-      <FinalCTA />
-    </>
+    <main className="snap-container">
+      <section className="snap-section">
+        <Hero />
+      </section>
+
+      <section className="snap-section">
+        <Context />
+      </section>
+
+      <section className="snap-section">
+        <ImageText />
+      </section>
+
+      <section className="snap-section">
+        <Benefits />
+      </section>
+
+      <section className="snap-section">
+        <FinalCTA />
+      </section>
+    </main>
   );
 };
 

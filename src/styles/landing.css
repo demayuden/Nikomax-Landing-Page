@@ -1,7 +1,9 @@
 /* ---------- GLOBAL SECTION STYLES ---------- */
 
 .section {
-  padding: 80px 20px;
+  min-height: 100vh;
+  width: 100%;
+  padding: 60px 20px;
 }
 
 .section-center {
@@ -26,6 +28,7 @@
 /* ---------- HERO ---------- */
 
 .hero {
+  width: 100%;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -48,7 +51,7 @@
 
 .hero-subtitle {
   font-size: 1.5rem;
-  color: #38bdf8;
+  color: lch(69.18% 69.34 60.59);
   margin-bottom: 20px;
 }
 
@@ -68,7 +71,7 @@
 /* ---------- BUTTON ---------- */
 
 .btn-primary {
-  background-color: #38bdf8;
+  background-color: #f88e38;
   color: #020617;
   padding: 14px 32px;
   border: none;
@@ -81,19 +84,27 @@
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(56, 189, 248, 0.3);
+  box-shadow: 0 10px 25px rgba(248, 152, 56, 0.3);
 }
 
 /* ---------- BENEFITS ---------- */
 
 .benefits {
+  align-items: center;
   background-color: #f9fafb;
 }
 
+.benefits-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 .benefits-list {
-  max-width: 900px;
-  margin: 40px auto 0;
-  text-align: left;
+  max-width: 700px;
+  list-style-position: inside;
+  padding: 0;
+  margin-top: 30px;
+  text-align: left; /* readable bullets */
 }
 
 .benefits-list li {
@@ -105,6 +116,7 @@
 /* ---------- FINAL CTA ---------- */
 
 .final-cta {
+  width: 100%;
   background-color: #020617;
   color: white;
   text-align: center;
@@ -144,4 +156,172 @@
   }
 }
 
-/* --------*
+/* ---------- SCROLL SNAP FULL PAGE ---------- */
+
+.snap-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.snap-section {
+  width: 100%;
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.snap-section > * {
+  animation: fadeUp 0.8s ease both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- HERO VIDEO ---------- */
+
+.video-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(2, 6, 23, 0.55),
+    rgba(2, 6, 23, 0.85)
+  );
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+}
+
+/* ---------- CONTEXT BACKGROUND SECTION ---------- */
+
+.context-bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ---------- IMAGE TEXT BACKGROUND SECTION ---------- */
+
+.image-text-bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.image-text-bg .section-title,
+.image-text-bg .section-text {
+  color: #f9fafb;
+}
+
+/* ---------- VIDEO BACKGROUND SECTIONS ---------- */
+
+.video-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.section-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(2, 6, 23, 0.75),
+    rgba(2, 6, 23, 0.85)
+  );
+  z-index: 2;
+}
+
+.video-section .section-center {
+  position: relative;
+  z-index: 3;
+}
+
+.video-section .section-title,
+.video-section .benefits-list,
+.video-section .benefits-list li {
+  color: #f9fafb;
+}
+
+/* ---------- REGISTER PAGE ---------- */
+
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0f172a, #020617);
+  padding: 40px 20px;
+}
+
+.register-container {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+.register-container h1 {
+  margin-bottom: 10px;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.register-form input,
+.register-form textarea {
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.register-form textarea {
+  resize: none;
+  height: 100px;
+}
