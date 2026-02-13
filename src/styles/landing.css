@@ -506,3 +506,22 @@
     opacity: 1;
   }
 }
+.final-cta .section-center {
+  position: relative;
+  z-index: 3;
+  color: #ffffff;
+}
+
+.final-cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.final-cta p {
+  font-size: 1.15rem;
+  margin-bottom: 30px;
+  color: #e5e7eb;
+}
+.final-cta .section-overlay {
+  background: rgba(0, 0, 0, 0.85);
+}
