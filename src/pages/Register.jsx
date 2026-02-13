@@ -9,6 +9,7 @@ const Register = () => {
     phone: "",
     message: "",
   });
+  const [showPopup, setShowPopup] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -28,7 +29,7 @@ const Register = () => {
         "mm022Cw1LKorzzoEa"
       )
       .then(() => {
-        alert("Registration submitted successfully!");
+        setShowPopup(true);
         setFormData({
           from_name: "",
           from_email: "",
@@ -97,6 +98,24 @@ const Register = () => {
             Submit Registration
           </button>
         </form>
+
+        {showPopup && (
+        <div className="popup-overlay">
+          <div className="popup-box">
+            <h2>Registration Successful!</h2>
+            <p>
+              Thank you for registering. Our team will contact you shortly.
+            </p>
+            <button
+              className="btn-primary"
+              onClick={() => setShowPopup(false)}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ const Benefits = () => {
 
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.playbackRate = 0.6; // 🔽 slower (0.5–0.7 is ideal)
+      videoRef.current.playbackRate = 0.8; // 🔽 slower (0.5–0.7 is ideal)
     }
   }, []);
 
@@ -27,27 +27,49 @@ const Benefits = () => {
 
       {/* Content */}
       <div className="section-center">
+        <h2 className="section-title">
+          More Than Installation — It’s a Certification
+        </h2>
+
+        <p className="section-text">
+          Becoming a Nikomax Authorized Installer positions your business
+          as a trusted, manufacturer-backed partner capable of delivering
+          long-term structured cabling reliability.
+        </p>
+
         <h2 className="section-title">Why Get Certified?</h2>
 
-        <div className="benefits-wrapper">
-          <ul className="benefits-list">
-            <li>
-              <strong>25-Year System Warranty</strong> – Offer a quarter-century
-              of guaranteed performance on full Nikomax installations.
-            </li>
-            <li>
-              <strong>Direct Technical Support</strong> – Priority access to
-              expert engineers for project design and troubleshooting.
-            </li>
-            <li>
-              <strong>Boost Your Win Rate</strong> – Stand out in tenders that
-              require manufacturer-backed certification.
-            </li>
-            <li>
-              <strong>Advanced Training</strong> – Hands-on workshops covering
-              the latest copper and fiber optic technologies.
-            </li>
-          </ul>
+        <div className="benefits-cards">
+          <div className="benefit-card">
+            <h3>25-Year System Warranty</h3>
+            <p>
+              Offer a quarter-century of guaranteed performance on full
+              Nikomax installations.
+            </p>
+          </div>
+
+          <div className="benefit-card">
+            <h3>Direct Technical Support</h3>
+            <p>
+              Gain priority access to expert engineers for project design
+              and troubleshooting.
+            </p>
+          </div>
+
+          <div className="benefit-card">
+            <h3>Boost Your Win Rate</h3>
+            <p>
+              Stand out in tenders that require manufacturer-backed certification.
+            </p>
+          </div>
+
+          <div className="benefit-card">
+            <h3>Advanced Training</h3>
+            <p>
+              Master the latest copper and fiber optic technologies through
+              hands-on workshops.
+            </p>
+          </div>
         </div>
       </div>
     </section>
